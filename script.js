@@ -1,21 +1,22 @@
 function processForm() {
-  // 获取用户输入的性别和年龄
-  let gender = document.getElementById('gender').value;
-  let age = parseInt(document.getElementById('age').value);
+  // 获取用户输入的两个数字
+  let n1 = parseFloat(document.getElementById('num1').value);
+  let n2 = parseFloat(document.getElementById('num2').value);
 
-  // 判断性别和年龄并显示对应的问候信息
-  let greeting = '';
-  if (gender === 'male') {
-    greeting = (age >= 20) ? '小伙子，谢谢你的提交！' : '小兄弟，谢谢你的提交！';
-  } else if (gender === 'female') {
-    greeting = (age >= 20) ? '女士，谢谢你的提交！' : '小姑娘，谢谢你的提交！';
-  } else {
-    greeting = '谢谢你的提交！';
+  // 计算两数之和
+  let n3 = n1 + n2;
+
+  document.getElementById('zhi').innerText = n3;
+
+  // 在控制台中显示结果
+  if (isNaN(num1) || isNaN(num2)) {
+    
+    console.error("请输入有效的数字");
   }
+  else 
+  {
+    
+    console.log(n3);
 
-  // 显示问候信息到页面上
-  document.getElementById('greetingMessage').innerText = greeting;
-
-  // 在控制台中显示问候信息
-  console.log(greeting);
+  }
 }
